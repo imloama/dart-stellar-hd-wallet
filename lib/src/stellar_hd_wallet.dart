@@ -85,20 +85,16 @@ class StellarHDWallet{
       splitPath = splitPath.sublist(1);
     }
     final seed = hMacSHA512(utf8.encode(KEY), this._seed);
-    ExtendedKey key = ExtendedKey(seed: seed);
-
-    ExtendedKey result = splitPath.fold(key, ( ExtendedKey prev,String indexStr) {
+    Uint8List result = splitPath.fold(seed, ( Uint8List prev,String indexStr) {
       int index;
       if (indexStr.substring(indexStr.length - 1) == "'") {
         index = int.parse(indexStr.substring(0, indexStr.length - 1));
       } else {
         index = int.parse(indexStr);
       }
-      final data = derive(prev.seed.sublist(0,32), prev.seed.sublist(32), index);
-      return ExtendedKey(seed: data);
+      return derive(prev.sublist(0,32), prev.sublist(32), index);
     });
-    //KeyPair kp = KeyPair.fromSecretSeedList(result.seed);
-    return result.seed;
+    return result;
   }
 
   KeyPair getKeyPair({int index = 0}) {
@@ -116,9 +112,4 @@ class StellarHDWallet{
 
   Uint8List get seed => this._seed;
 
-}
-
-class ExtendedKey{
-  Uint8List seed;
-  ExtendedKey({this.seed});
 }

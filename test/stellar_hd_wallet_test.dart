@@ -1,12 +1,11 @@
 import 'dart:convert';
-
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 import 'package:hex/hex.dart';
 import 'package:stellar/stellar.dart';
 
 import 'package:stellar_hd_wallet/wallet.dart';
 
-void main() {
+void main(){
   test('get account id from mnemonic', () {
     final mnemonic = "illness spike retreat truth genius clock brain pass fit cave bargain toe";
     final wallet = StellarHDWallet.fromMnemonic(mnemonic);
