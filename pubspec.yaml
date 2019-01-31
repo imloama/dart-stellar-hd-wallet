@@ -1,6 +1,6 @@
 name: stellar_hd_wallet
-description: stellar hd wallet
-version: 0.0.1
+description: a stellar hd wallet, base on bip39 and stelalr sdk，you can use it to generate random mnemonic and get account from mnemonic
+version: 1.0.0
 author: imloama<imloama@gmail.com>
 homepage: https://github.com/imloama/dart-stellar-hd-wallet
 

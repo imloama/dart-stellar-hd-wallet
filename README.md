@@ -1,17 +1,17 @@
-# stellar_hd_wallet
+# Stellar HD Wallet
 
-Stellar HD Wallet
+Stellar HD Wallet, base on bip39 and stelalr sdk，you can use it to generate random mnemonic and get account from mnemonic
 
 ## import
 
 pubspec.yaml
 ```
-stellar_hd_wallet: ^0.0.1
+stellar_hd_wallet: ^1.0.0
 ```
 
 ## example
 ```
-    import "stellar_hd_wallet/wallet.dart";
+    import 'package:stellar_hd_wallet/stellar_hd_wallet.dart';
 
     void main(){
         // get random mnemonic ( english )
