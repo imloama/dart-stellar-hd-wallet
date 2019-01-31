@@ -1,19 +1,6 @@
-# stellar_hd_wallet
+import 'package:stellar_hd_wallet/wallet.dart';
 
-Stellar HD Wallet
-
-## import
-
-pubspec.yaml
-```
-stellar_hd_wallet: ^0.0.1
-```
-
-## example
-```
-    import "stellar_hd_wallet/wallet.dart";
-
-    void main(){
+void main(){
         // get random mnemonic ( english )
         final mnemonic = StellarHDWallet.generateMnemonic();
         print(mnemonic);
@@ -27,7 +14,5 @@ stellar_hd_wallet: ^0.0.1
         final keypairIndex1 = wallet.getKeyPair(index: 1);
         print(keypairIndex1.accountId);
         print(keypairIndex1.secretSeed);
+
     }
-
-```
-
