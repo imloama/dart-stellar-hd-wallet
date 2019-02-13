@@ -8,7 +8,7 @@ environment:
   sdk: '>=2.0.0 <3.0.0'
 
 dependencies:
-  stellar: ^0.3.2
+  stellar: any
   bip39: ^1.0.3
   pointycastle: ^1.0.0
 
