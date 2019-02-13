@@ -119,7 +119,7 @@ packages:
       name: http
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.11.3+17"
+    version: "0.12.0+1"
   http_multi_server:
     dependency: transitive
     description:
@@ -312,9 +312,11 @@ packages:
   stellar:
     dependency: "direct main"
     description:
-      name: stellar
-      url: "https://pub.flutter-io.cn"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "515427901474696168430c217db3313834a5e1bb"
+      url: "git@github.com:imloama/dart-stellar-sdk.git"
+    source: git
     version: "0.3.2"
   stream_channel:
     dependency: transitive
