@@ -31,7 +31,11 @@ class StellarHDWallet {
       {int strength = ENTROPY_BITS_HALF,
       language = 'english',
       bip39.RandomBytes random}) {
-    return bip39.generateMnemonic(strength: strength, randomBytes: random);
+    if (random is Function) {
+      return bip39.generateMnemonic(strength: strength, randomBytes: random);
+    } else {
+      return bip39.generateMnemonic(strength: strength);
+    }
   }
 
   /**
